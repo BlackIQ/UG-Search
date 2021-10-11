@@ -1,5 +1,6 @@
 .main {
     margin: 2%;
+    background-color: #f3f3f3;
 }
 
 .center {
@@ -8,4 +9,43 @@
 
 .inpart {
     padding: 2%;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+}
+
+.text {
+    color: #1434A4;
+}
+
+.intro .img {
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.line {
+    border: solid 1px #000080;
+}
+
+.box {
+    border: solid 1px #1434a4;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 25vh;
+    position: relative;
+}
+.box .det {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    right: 0;
+}
+.box:hover {
+    background-color: #eee;
+}
+.box b {
+    color: #1434A4;
 }
