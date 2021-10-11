@@ -13,8 +13,6 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = '1234'
 
-# api = requests.get("https://data.covidapi.com/countries").json()
-
 @app.route("/", methods = ["GET", "POST"])
 def index():
     form = GetUsername(request.form)
@@ -27,6 +25,9 @@ def index():
 def user():
     if "username" in request.args:
         username = request.args["username"]
-        return username
+
+        api = requests.get(f"https://api.github.com/users/{username}").json()
+
+        return render_template("user.html", user = api)
     else:
         redirect("/")
