@@ -18,18 +18,21 @@
                     Search the username here.
                 </p>
                 <br>
-                <div class="row">
-                    <div class="col-md-8">
-                        <form>
-                            <input class="form-control" placeholder="Search Username">
-                        </form>
-                        <br>
+                <form action="/" method="POST">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div>
+                                {{ form.csrf_token }}
+                                {{ form.username(placeholder="Search username", class="form-control") }}
+                            </div>
+                            <br>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-success">Search</button>
+                            <br>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <button class="btn btn-success">Search</button>
-                        <br>
-                    </div>
-                </div>
+                </form>
                 <br>
             </div>
         </div>
