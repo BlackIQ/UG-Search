@@ -9,4 +9,5 @@ api = requests.get("https://data.covidapi.com/countries").json()
 
 @app.route("/")
 def index():
-    return "Hi"
+    # return "Hi"
+    return render_template("index.html")
