@@ -26,8 +26,9 @@ def user():
     if "username" in request.args:
         username = request.args["username"]
 
-        api = requests.get(f"https://api.github.com/users/{username}").json()
+        user = requests.get(f"https://api.github.com/users/{username}").json()
+        repos = requests.get(f"https://api.github.com/users/{username}/repos").json()
 
-        return render_template("user.html", user = api)
+        return render_template("user.html", user = user, len_repos = len(repos), repos = repos)
     else:
         redirect("/")
