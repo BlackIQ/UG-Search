@@ -51,35 +51,58 @@
     background-color: #eee;
 }
 
+.text-repos {
+    color: green;
+}
 .repos {
-    border: solid 1px red;
+    border: solid 1px green;
 }
 .repos b {
-    color: red;
+    color: green;
+}
+.repos .glink {
+    color: green;
+    text-decoration: none;
 }
 
+.text-gists {
+    color: orangered;
+}
 .gists {
-    border: solid 1px red;
+    border: solid 1px orangered;
 }
 .gists b {
-    color: red;
+    color: orangered;
+}
+.gists .glink {
+    color: orangered;
+    text-decoration: none;
 }
 
+.text-followers {
+    color: purple;
+}
 .followers {
-    border: solid 1px red;
+    border: solid 1px purple;
 }
 .followers b {
-    color: red;
+    color: purple;
+}
+.followers .glink {
+    color: purple;
+    text-decoration: none;
 }
 
+.text-following {
+    color: #000080;
+}
 .following {
-    border: solid 1px red;
+    border: solid 1px #000080;
 }
 .following b {
-    color: red;
+    color: #000080;
 }
-
-.glink {
-    color: green;
+.following .glink {
+    color: #000080;
     text-decoration: none;
 }
