@@ -13,7 +13,7 @@ Here search for users in Github and other stuff!
 
 ### Where to see
 
-Open [us-search.herokuapp.com/](https://ug-search.herokuapp.com/).
+Open [us-search.herokuapp.com](https://ug-search.herokuapp.com/).
 
 ### Contribute
 
@@ -40,6 +40,10 @@ $ flask run
 ```
 
 - After go to `127.0.0.1:5000` in your broswer.
+
+[![ScreenShot](app/static/images/index.png)](#)
+
+### Some screenshots
 
 [![ScreenShot](app/static/images/readme1.png)](#)
 
