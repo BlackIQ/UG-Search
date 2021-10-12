@@ -35,17 +35,8 @@
     padding: 10px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    height: 25vh;
     position: relative;
     cursor: pointer;
-}
-
-.box .det {
-    position: absolute;
-    bottom: 0;
-    padding: 10px;
-    right: 0;
-    color: green;
 }
 .box:hover {
     background-color: #eee;
@@ -56,8 +47,16 @@
 }
 .repos {
     border: solid 1px green;
+    height: 25vh;
 }
 .repos b {
+    color: green;
+}
+.repos .det {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    right: 0;
     color: green;
 }
 .repos .glink {
@@ -70,8 +69,16 @@
 }
 .gists {
     border: solid 1px orangered;
+    height: 15vh;
 }
 .gists b {
+    color: orangered;
+}
+.gists .det {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    right: 0;
     color: orangered;
 }
 .gists .glink {
@@ -84,8 +91,16 @@
 }
 .followers {
     border: solid 1px purple;
+    height: 20vh;
 }
 .followers b {
+    color: purple;
+}
+.followers .det {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    right: 0;
     color: purple;
 }
 .followers .glink {
@@ -98,8 +113,16 @@
 }
 .following {
     border: solid 1px #000080;
+    height: 20vh;
 }
 .following b {
+    color: #000080;
+}
+.following .det {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    right: 0;
     color: #000080;
 }
 .following .glink {
