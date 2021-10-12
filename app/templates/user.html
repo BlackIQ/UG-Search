@@ -65,6 +65,7 @@
         <div class="row">
             <div>
                 <h3 class="text-repos">Repositories</h3>
+                <p class="text-repos"><b>{{ user["login"] }}</b> has <b>{{ len_repos }}</b> public repositories.</p>
                 <br>
                 <div class="row">
                     {% for i in range(len_repos) %}
@@ -88,6 +89,7 @@
         <div class="row">
             <div>
                 <h3 class="text-gists">Gists</h3>
+                <p class="text-gists"><b>About <b>gists</b>, {{ user["login"] }}</b> has <b>{{ len_gists }}</b> public gists.</p>
                 <br>
                 <div class="row">
                     {% for i in range(len_gists) %}
