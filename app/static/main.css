@@ -50,6 +50,13 @@
 .box:hover {
     background-color: #f3f3f3;
 }
+.box .img {
+    text-align: center;
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
 .text-repos {
     color: green;
