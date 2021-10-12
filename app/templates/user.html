@@ -64,7 +64,7 @@
         <br>
         <div class="row">
             <div>
-                <h3 class="text">Repositories</h3>
+                <h3 class="text-repos">Repositories</h3>
                 <br>
                 <div class="row">
                     {% for i in range(len_repos) %}
@@ -87,7 +87,7 @@
         <br>
         <div class="row">
             <div>
-                <h3 class="text">Gists</h3>
+                <h3 class="text-gists">Gists</h3>
                 <br>
                 <div class="row">
                     {% for i in range(len_gists) %}
@@ -105,7 +105,7 @@
         <br>
         <div class="row">
             <div>
-                <h3 class="text">Followers</h3>
+                <h3 class="text-followers">Followers</h3>
                 <br>
                 <div class="row">
                     {% for i in range(len_followers) %}
@@ -119,7 +119,6 @@
                                 <div class="col-md-8">
                                     <b>{{ followers[i]['login'] }}</b>
                                     <br>
-                                    <small>Bio</small>
                                     <small class="det">
                                         <i class="fa fa-github"></i> Go to Github
                                         |
@@ -139,7 +138,7 @@
         <br>
         <div class="row">
             <div>
-                <h3 class="text">Following</h3>
+                <h3 class="text-following">Following</h3>
                 <br>
                 <div class="row">
                     {% for i in range(len_following) %}
@@ -153,7 +152,6 @@
                                 <div class="col-md-8">
                                     <b>{{ following[i]['login'] }}</b>
                                     <br>
-                                    <small>Bio</small>
                                     <small class="det">
                                         <i class="fa fa-github"></i> <a class="glink" href="{{ following[i]['html_url'] }}">Go to Github</a>
                                         |
