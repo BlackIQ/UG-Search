@@ -69,7 +69,7 @@
                 <div class="row">
                     {% for i in range(len_repos) %}
                     <div class="col-md-4">
-                        <div class="box">
+                        <div class="box" onclick='location.href = "https://github.com/{{ user['login'] }}/{{ repos[i]['name'] }}"'>
                             <b>{{ repos[i]['name'] }}</b>
                             <br>
                             <small>{{ repos[i]['description'] }}</small>
