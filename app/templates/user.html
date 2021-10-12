@@ -13,29 +13,21 @@
     <div class="">
         <div class="intro">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="">
                         <img class="img" src='{{ user["avatar_url"] }}'>
                         <br>
-                        <br>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-8">
+                    <div>
                         <h3 class="text">{{ user['name'] }}</h3>
-                        <hr class="line">
                         <p class="text">
                             <small><i class="fa fa-info"></i> Bio</small>
                             <br>
                             {{ user['bio'] }}
                         </p>
-                        <hr class="line">
-                        <p class="text">
-                            <i class="fa fa-plus"></i> <b>Joined at</b> {{ user['created_at'] }}
-                        </p>
-                    </div>
-                    <br>
-                </div>
-                <div class="col-md-4">
-                    <div>
-                        <h3 class="text">Github Activities</h3>
-                        <br>
                         <p>
                             <i class="fa fa-users text"></i> <b class="text">Followers</b> {{ user['followers'] }}
                             <br>
@@ -46,9 +38,6 @@
                             <br>
                             <i class="fa fa-sticky-note-o text"></i> <b class="text">Public gists</b> {{ user['public_gists'] }}
                         </p>
-                        <hr class="line">
-                        <h3 class="text">User other data</h3>
-                        <br>
                         <p>
                             <i class="fa fa-map-marker text"></i> <b class="text">Location</b> {{ user['location'] }}
                             <br>
@@ -58,12 +47,15 @@
                             <br>
                             <i class="fa fa-globe text"></i> <b class="text">Blog | Site</b> <a class="links" href="{{ user['blog'] }}">{{ user['blog'] }}</a>
                         </p>
+                        <br>
+                        <p class="text">
+                            <i class="fa fa-plus"></i> <b>Joined at</b> {{ user['created_at'] }}
+                        </p>
                     </div>
                     <br>
                 </div>
             </div>
         </div>
-        <br>
         <div class="main">
             <div class="row">
                 <div>
