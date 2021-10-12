@@ -8,18 +8,12 @@
 }
 
 .intro {
-    position: relative;
-    height: 100vh;
+    /* position: relative; */
+    /* height: 100vh; */
     padding: 2%;
     background-color: #f3f3f3;
 }
-.introdet {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
+
 
 .inpart {
     padding: 2%;
