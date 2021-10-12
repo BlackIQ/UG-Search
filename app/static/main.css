@@ -36,12 +36,14 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     height: 25vh;
     position: relative;
+    cursor: pointer;
 }
 .box .det {
     position: absolute;
     bottom: 0;
     padding: 10px;
     right: 0;
+    color: green;
 }
 .box:hover {
     background-color: #eee;
