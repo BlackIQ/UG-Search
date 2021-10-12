@@ -45,7 +45,7 @@
     cursor: pointer;
 }
 .box:hover {
-    background-color: #eee;
+    background-color: #f3f3f3;
 }
 
 .text-repos {
