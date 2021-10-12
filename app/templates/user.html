@@ -69,7 +69,7 @@
                 <div class="row">
                     {% for i in range(len_repos) %}
                     <div class="col-md-4">
-                        <div class="box" onclick='location.href = "https://github.com/{{ user['login'] }}/{{ repos[i]['name'] }}"'>
+                        <div class="box" onclick='location.href = "{{ repos[i]['html_url'] }}"'>
                             <b>{{ repos[i]['name'] }}</b>
                             <br>
                             <small>{{ repos[i]['description'] }}</small>
@@ -99,6 +99,39 @@
                     </div>
                     <br>
                     {% endfor %}
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div>
+                <h3 class="text">Followers</h3>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box" onclick='location.href = "https://google.com"'>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img class="img" sizes="25%" src="https://avatars.githubusercontent.com/u/55284339?v=4">
+                                    <br>
+                                </div>
+                                <div class="col-md-7">
+                                    <b>Username</b>
+                                    <br>
+                                    <small>Bio</small>
+                                    <small class="det">
+                                        <i class="fa fa-star"></i> x
+                                        <i class="fa fa-star"></i> y
+                                        <i class="fa fa-star"></i> a
+                                        <i class="fa fa-star"></i> b
+                                    </small>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <br>
                 </div>
             </div>
         </div>
