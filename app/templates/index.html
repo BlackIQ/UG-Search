@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gsearch</title>
+    <title>UG Search</title>
     <link href="static/main.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
     <link href="https://cdn.neotrinost.ir/jobnic/css/bootstrap.min.css" type="text/css" rel="stylesheet">
@@ -12,8 +12,25 @@
 <body class="main">
     <div class="">
         <div class="row">
+            <div class="col-md-5 inpart">
+                <h3>UG search</h3>
+                <p>
+                    This is an open-source project.
+                    <br>
+                    Just search the username, see user data.
+                </p>
+                <br>
+                <h3>How to contribute</h3>
+                <p>
+                    You can help to improve this project in <i class="fa fa-github"></i> Github.
+                </p>
+                <br>
+                <p>
+                    <b>Repository</b> <a href="https://github.com/BlackIQ/UG-Search" class="ilink"><i class="fa fa-github"></i>/BlackIQ/UG-Search</a>
+                </p>
+            </div>
             <div class="col-md-4 inpart">
-                <h3>Search User</h3>
+                <h3>Search Users in <i class="fa fa-github"></i></h3>
                 <p>
                     Search the username here.
                 </p>
@@ -23,12 +40,12 @@
                         <div class="col-md-8">
                             <div>
                                 {{ form.csrf_token }}
-                                {{ form.username(placeholder="Search username", class="form-control") }}
+                                {{ form.username(placeholder="Search username", class="form-control bordered border-dark") }}
                             </div>
                             <br>
                         </div>
                         <div class="col-md-4">
-                            <button type="submit" class="btn btn-success">Search</button>
+                            <button type="submit" class="btn btn-dark">Search</button>
                             <br>
                         </div>
                     </div>
