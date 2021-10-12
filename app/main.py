@@ -61,6 +61,4 @@ def user_search(username):
     else:
         flash("Unexpected problem")
         return redirect("/")
-
-
-app.run('0.0.0.0', debug=True)
+        
