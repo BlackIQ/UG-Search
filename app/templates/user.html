@@ -106,6 +106,7 @@
         <div class="row">
             <div>
                 <h3 class="text-followers">Followers</h3>
+                <p class="text-followers"><b>{{ user["login"] }}</b> has <b>{{ len_followers }}</b> followers.</p>
                 <br>
                 <div class="row">
                     {% for i in range(len_followers) %}
@@ -139,6 +140,7 @@
         <div class="row">
             <div>
                 <h3 class="text-following">Following</h3>
+                <p class="text-following">BTW, <b>{{ user["login"] }}</b> is following <b>{{ len_following }}</b> users.</p>
                 <br>
                 <div class="row">
                     {% for i in range(len_following) %}
