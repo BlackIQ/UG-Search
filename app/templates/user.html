@@ -136,6 +136,40 @@
                 </div>
             </div>
         </div>
+        <br>
+        <div class="row">
+            <div>
+                <h3 class="text">Following</h3>
+                <br>
+                <div class="row">
+                    {% for i in range(len_following) %}
+                    <div class="col-md-4">
+                        <div class="box" onclick='location.href = "{{ following[i]['html_url'] }}"'>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img class="img" src="{{ following[i]['avatar_url'] }}">
+                                    <br>
+                                </div>
+                                <div class="col-md-8">
+                                    <b>{{ following[i]['login'] }}</b>
+                                    <br>
+                                    <small>Bio</small>
+                                    <small class="det">
+                                        <i class="fa fa-github"></i> Go to Github
+                                        |
+                                        <i class="fa fa-search"></i> Go for Gsearch
+                                    </small>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
