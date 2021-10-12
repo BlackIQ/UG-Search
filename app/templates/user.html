@@ -65,7 +65,11 @@
         <div class="row">
             <div>
                 <h3 class="text-repos">Repositories</h3>
-                <p class="text-repos"><b>{{ user["login"] }}</b> has <b>{{ len_repos }}</b> public repositories.</p>
+                <p class="text-repos">
+                    <b>{{ user["login"] }}</b> has <b>{{ user['public_repos'] }}</b> public repositories.
+                    <br>
+                    Here is at last 30 of them.
+                </p>
                 <br>
                 <div class="row">
                     {% for i in range(len_repos) %}
@@ -89,7 +93,11 @@
         <div class="row">
             <div>
                 <h3 class="text-gists">Gists</h3>
-                <p class="text-gists"><b>About <b>gists</b>, {{ user["login"] }}</b> has <b>{{ len_gists }}</b> public gists.</p>
+                <p class="text-gists">
+                    <b>About <b>gists</b>, {{ user["login"] }}</b> has <b>{{ user['public_gists'] }}</b> public gists.
+                    <br>
+                    Here is at last 30 of them.
+                </p>
                 <br>
                 <div class="row">
                     {% for i in range(len_gists) %}
@@ -108,7 +116,11 @@
         <div class="row">
             <div>
                 <h3 class="text-followers">Followers</h3>
-                <p class="text-followers"><b>{{ user["login"] }}</b> has <b>{{ len_followers }}</b> followers.</p>
+                <p class="text-followers">
+                    <b>{{ user["login"] }}</b> has <b>{{ len_followers }}</b> followers.
+                    <br>
+                    Here is at last 30 of them.
+                </p>
                 <br>
                 <div class="row">
                     {% for i in range(len_followers) %}
@@ -142,7 +154,11 @@
         <div class="row">
             <div>
                 <h3 class="text-following">Following</h3>
-                <p class="text-following">BTW, <b>{{ user["login"] }}</b> is following <b>{{ len_following }}</b> users.</p>
+                <p class="text-following">
+                    BTW, <b>{{ user["login"] }}</b> is following <b>{{ len_following }}</b> users.
+                    <br>
+                    Here is at last 30 of them.
+                </p>
                 <br>
                 <div class="row">
                     {% for i in range(len_following) %}
