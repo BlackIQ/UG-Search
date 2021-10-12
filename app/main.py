@@ -28,7 +28,13 @@ def user():
 
         user = requests.get(f"https://api.github.com/users/{username}").json()
         repos = requests.get(f"https://api.github.com/users/{username}/repos").json()
+        gists = requests.get(f"https://api.github.com/users/{username}/gists").json()
 
-        return render_template("user.html", user = user, len_repos = len(repos), repos = repos)
+        return render_template(
+            "user.html",
+            user = user,
+            len_repos = len(repos), repos = repos,
+            len_gists = len(gists), gists = gists
+        )
     else:
         redirect("/")
