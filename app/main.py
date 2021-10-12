@@ -24,6 +24,7 @@ def index():
 
 @app.route("/user", methods = ["GET", "POST"])
 def user():
+    flash('You should enter a username')
     return redirect("/")
 
 
