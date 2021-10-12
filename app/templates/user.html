@@ -69,7 +69,7 @@
                 <div class="row">
                     {% for i in range(len_repos) %}
                     <div class="col-md-4">
-                        <div class="box" onclick='location.href = "{{ repos[i]['html_url'] }}"'>
+                        <div class="box repos" onclick='location.href = "{{ repos[i]['html_url'] }}"'>
                             <b>{{ repos[i]['name'] }}</b>
                             <br>
                             <small>{{ repos[i]['description'] }}</small>
@@ -92,7 +92,7 @@
                 <div class="row">
                     {% for i in range(len_gists) %}
                     <div class="col-md-4">
-                        <div class="box" onclick='location.href = "{{ gists[i]['html_url'] }}"'>
+                        <div class="box gists" onclick='location.href = "{{ gists[i]['html_url'] }}"'>
                             <b>{{ gists[i]['description'] }}</b>
                         </div>
                         <br>
@@ -110,7 +110,7 @@
                 <div class="row">
                     {% for i in range(len_followers) %}
                     <div class="col-md-4">
-                        <div class="box" onclick='location.href = "{{ followers[i]['html_url'] }}"'>
+                        <div class="box followers" onclick='location.href = "{{ followers[i]['html_url'] }}"'>
                             <div class="row">
                                 <div class="col-md-4">
                                     <img class="img" src="{{ followers[i]['avatar_url'] }}">
@@ -144,7 +144,7 @@
                 <div class="row">
                     {% for i in range(len_following) %}
                     <div class="col-md-4">
-                        <div class="box" onclick='location.href = "{{ following[i]['html_url'] }}"'>
+                        <div class="box following" onclick='location.href = "{{ following[i]['html_url'] }}"'>
                             <div class="row">
                                 <div class="col-md-4">
                                     <img class="img" src="{{ following[i]['avatar_url'] }}">
@@ -155,9 +155,9 @@
                                     <br>
                                     <small>Bio</small>
                                     <small class="det">
-                                        <i class="fa fa-github"></i> Go to Github
+                                        <i class="fa fa-github"></i> <a class="glink" href="{{ following[i]['html_url'] }}">Go to Github</a>
                                         |
-                                        <i class="fa fa-search"></i> Go for Gsearch
+                                        <i class="fa fa-search"></i> <a class="glink" href="/user?user={{ following[i]['login'] }}">Go to Github</a>
                                     </small>
                                     <br>
                                 </div>
