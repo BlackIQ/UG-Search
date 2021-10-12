@@ -32,7 +32,6 @@
 }
 
 .box {
-    border: solid 1px #1434a4;
     padding: 10px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -40,6 +39,7 @@
     position: relative;
     cursor: pointer;
 }
+
 .box .det {
     position: absolute;
     bottom: 0;
@@ -50,6 +50,36 @@
 .box:hover {
     background-color: #eee;
 }
-.box b {
-    color: #1434A4;
+
+.repos {
+    border: solid 1px red;
+}
+.repos b {
+    color: red;
+}
+
+.gists {
+    border: solid 1px red;
+}
+.gists b {
+    color: red;
+}
+
+.followers {
+    border: solid 1px red;
+}
+.followers b {
+    color: red;
+}
+
+.following {
+    border: solid 1px red;
+}
+.following b {
+    color: red;
+}
+
+.glink {
+    color: green;
+    text-decoration: none;
 }
