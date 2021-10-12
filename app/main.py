@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request
+from flask import Flask, redirect, render_template, request, flash
 from flask_wtf import FlaskForm
 from wtforms import StringField
 from wtforms.validators import DataRequired
@@ -18,16 +18,23 @@ def index():
     form = GetUsername(request.form)
     if request.method == 'POST' and form.validate():
         username = form.username.data
-        return redirect((f'/user?username={username}'))
+        return redirect((f'/user/{username}'))
     return render_template('index.html', form=form)
 
 
 @app.route("/user", methods = ["GET", "POST"])
 def user():
-    if "username" in request.args:
-        username = request.args["username"]
+    return redirect("/")
 
-        user = requests.get(f"https://api.github.com/users/{username}").json()
+
+@app.route("/user/<string:username>", methods = ["GET", "POST"])
+def user_search(username):
+
+    get_user_request = requests.get(f"https://api.github.com/users/{username}")
+
+    if get_user_request.ok:
+
+        user = get_user_request.json()
         repos = requests.get(f"https://api.github.com/users/{username}/repos").json()
         gists = requests.get(f"https://api.github.com/users/{username}/gists").json()
         followers = requests.get(f"https://api.github.com/users/{username}/followers").json()
@@ -41,5 +48,18 @@ def user():
             len_followers = len(followers), followers = followers,
             len_following = len(following), following = following
         )
+
+    elif get_user_request.status_code == 404:
+        flash("User not found")
+        return redirect("/")
+
+    elif get_user_request.status_code == 403:
+        flash("Api not responding, please try again later")
+        return redirect("/")
+
     else:
-        redirect("/")
+        flash("Unexpected problem")
+        return redirect("/")
+
+
+app.run('0.0.0.0', debug=True)
