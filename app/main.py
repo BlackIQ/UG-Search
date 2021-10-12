@@ -29,12 +29,16 @@ def user():
         user = requests.get(f"https://api.github.com/users/{username}").json()
         repos = requests.get(f"https://api.github.com/users/{username}/repos").json()
         gists = requests.get(f"https://api.github.com/users/{username}/gists").json()
+        followers = requests.get(f"https://api.github.com/users/{username}/followers").json()
+        following = requests.get(f"https://api.github.com/users/{username}/following").json()
 
         return render_template(
             "user.html",
             user = user,
             len_repos = len(repos), repos = repos,
-            len_gists = len(gists), gists = gists
+            len_gists = len(gists), gists = gists,
+            len_followers = len(followers), followers = followers,
+            len_following = len(following), following = following
         )
     else:
         redirect("/")
