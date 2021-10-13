@@ -33,14 +33,14 @@
                             {{ user['bio'] }}
                         </p>
                         <p>
-                            <i class="fa fa-users text"></i> <b class="text">Followers</b> {{ user['followers'] }}
+                            <i class="fa fa-users text"></i> <a class="ilink" href="#followers"><b class="text">Followers</b> {{ user['followers'] }}</a>
                             <br>
-                            <i class="fa fa-plus text"></i> <b class="text">Followings</b> {{ user['following'] }}
+                            <i class="fa fa-plus text"></i> <a class="ilink" href="#followings"><b class="text">Followings</b> {{ user['following'] }}</a>
                         </p>
                         <p>
-                            <i class="fa fa-database text"></i> <b class="text">Public repositories</b> {{ user['public_repos'] }}
+                            <i class="fa fa-database text"></i> <a class="ilink" href="#repos"><b class="text">Public repositories</b> {{ user['public_repos'] }}</a>
                             <br>
-                            <i class="fa fa-sticky-note-o text"></i> <b class="text">Public gists</b> {{ user['public_gists'] }}
+                            <i class="fa fa-sticky-note-o text"></i> <a class="ilink" href="#gists"><b class="text">Public gists</b> {{ user['public_gists'] }}</a>
                         </p>
                         <p>
                             <i class="fa fa-map-marker text"></i> <b class="text">Location</b> {{ user['location'] }}
