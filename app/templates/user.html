@@ -63,7 +63,7 @@
         <div class="main">
             <div class="row">
                 <div>
-                    <h3 class="text-repos">Repositories</h3>
+                    <h3 id="repos" class="text-repos">Repositories</h3>
                     <p class="text-repos">
                         <b>{{ user["login"] }}</b> has <b>{{ user['public_repos'] }}</b> public repositories.
                         <br>
@@ -93,7 +93,7 @@
             <br>
             <div class="row">
                 <div>
-                    <h3 class="text-gists">Gists</h3>
+                    <h3 id="gists" class="text-gists">Gists</h3>
                     <p class="text-gists">
                         <b>About <b>gists</b>, {{ user["login"] }}</b> has <b>{{ user['public_gists'] }}</b> public gists.
                         <br>
@@ -116,7 +116,7 @@
             <br>
             <div class="row">
                 <div>
-                    <h3 class="text-followers">Followers</h3>
+                    <h3 id="followers" class="text-followers">Followers</h3>
                     <p class="text-followers">
                         <b>{{ user["login"] }}</b> has <b>{{ len_followers }}</b> followers.
                         <br>
@@ -154,7 +154,7 @@
             <br>
             <div class="row">
                 <div>
-                    <h3 class="text-following">Following</h3>
+                    <h3 id="followings" class="text-following">Following</h3>
                     <p class="text-following">
                         BTW, <b>{{ user["login"] }}</b> is following <b>{{ len_following }}</b> users.
                         <br>
