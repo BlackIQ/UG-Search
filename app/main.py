@@ -13,7 +13,7 @@ class GetUsername(FlaskForm):
     username = StringField('username', validators=[DataRequired()])
 
 
-@app.route("/", methods = ["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def index():
     form = GetUsername(request.form)
     if request.method == 'POST' and form.validate():
@@ -22,15 +22,14 @@ def index():
     return render_template('index.html', form=form)
 
 
-@app.route("/user", methods = ["GET", "POST"])
+@app.route("/user", methods=["GET", "POST"])
 def user():
     flash('You should enter a username')
     return redirect("/")
 
 
-@app.route("/user/<string:username>", methods = ["GET", "POST"])
+@app.route("/user/<string:username>", methods=["GET", "POST"])
 def user_search(username):
-
     get_user_request = requests.get(f"https://api.github.com/users/{username}")
 
     if get_user_request.ok:
@@ -44,11 +43,11 @@ def user_search(username):
         if user["type"] == "User":
             return render_template(
                 "user.html",
-                user = user,
-                len_repos = len(repos), repos = repos,
-                len_gists = len(gists), gists = gists,
-                len_followers = len(followers), followers = followers,
-                len_following = len(following), following = following
+                user=user,
+                len_repos=len(repos), repos=repos,
+                len_gists=len(gists), gists=gists,
+                len_followers=len(followers), followers=followers,
+                len_following=len(following), following=following
             )
         else:
             flash("The username is for an organization")
@@ -65,4 +64,3 @@ def user_search(username):
     else:
         flash("Unexpected problem")
         return redirect("/")
-        
