@@ -63,3 +63,5 @@ This project is licensed under **GPL-3** license
 
 - [x] Front-End design
 - [x] Deploy
+- [ ] Search organization
+- [ ] Search repository
