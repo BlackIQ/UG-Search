@@ -18,7 +18,7 @@ def index():
     form = GetUsername(request.form)
     if request.method == 'POST' and form.validate():
         username = form.username.data
-        return redirect((f'/user/{username}'))
+        return redirect(f'/user/{username}')
     return render_template('index.html', form=form)
 
 
