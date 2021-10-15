@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>{{ user['login'] }} ({{ user['name'] }})</title>
+    <meta name="description" content="{{ user['bio'] }}. {{ user['login'] }} has {{ user['public_repos'] }} repositories available. Follow their code on GitHub.">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <meta property="fb:app_id" content="1401488693436528">
+    <meta name="apple-itunes-app" content="app-id=1477376905" />
+    <meta name="twitter:image:src" content="{{ user['avatar_url'] }}" />
+    <meta name="twitter:site" content="@github" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ user['login'] }} - Overview" />
+    <meta name="twitter:description" content="{{ user['bio'] }}. {{ user['login'] }} has {{ user['public_repos'] }} repositories available. Follow their code on GitHub." />
+    <meta property="og:image" content="{{ user['avatar_url'] }}" />
+    <meta property="og:image:alt" content="{{ user['bio'] }}. {{ user['login'] }} has {{ user['public_repos'] }} repositories available. Follow their code on GitHub." />
+    <meta property="og:site_name" content="GitHub" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="{{ user['login'] }} - Overview" />
+    <meta property="og:url" content="{{ user['html_url'] }}" />
+    <meta property="og:description" content="{{ user['bio'] }}. {{ user['login'] }} has {{ user['public_repos'] }} repositories available. Follow their code on GitHub." />
+    <meta property="profile:username" content="{{ user['login'] }}" />
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
