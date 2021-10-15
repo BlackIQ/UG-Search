@@ -41,14 +41,18 @@ def user_search(username):
         followers = requests.get(f"https://api.github.com/users/{username}/followers").json()
         following = requests.get(f"https://api.github.com/users/{username}/following").json()
 
-        return render_template(
-            "user.html",
-            user = user,
-            len_repos = len(repos), repos = repos,
-            len_gists = len(gists), gists = gists,
-            len_followers = len(followers), followers = followers,
-            len_following = len(following), following = following
-        )
+        if user["type"] == "User":
+            return render_template(
+                "user.html",
+                user = user,
+                len_repos = len(repos), repos = repos,
+                len_gists = len(gists), gists = gists,
+                len_followers = len(followers), followers = followers,
+                len_following = len(following), following = following
+            )
+        else:
+            flash("The username is for an organization")
+            return redirect("/")
 
     elif get_user_request.status_code == 404:
         flash("User not found")
