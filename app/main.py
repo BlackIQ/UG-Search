@@ -82,12 +82,12 @@ def user_search(username):
         return redirect("/")
 
 @app.route("/repository", methods=["GET", "POST"])
-def user():
+def repo():
     flash('You should enter a username and repository')
     return redirect("/")
 
 @app.route("/repository/<string:username>/<string:repo>", methods=["GET", "POST"])
-def user_search(username, repo):
+def repo_search(username, repo):
     get_repo_request = requests.get(f"https://api.github.com/repo/{username}/{repo}")
 
     if get_repo_request.ok:
