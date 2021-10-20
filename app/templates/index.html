@@ -47,16 +47,26 @@
                 <br>
                 <form action="/" method="POST">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div>
                             <div>
-                                {{ form.csrf_token }}
-                                {{ form.username(placeholder="Search username", class="form-control bordered border-dark") }}
+                                {{ user_get.csrf_token }}
+                                {{ user_get.username(placeholder="Search username", class="form-control bordered border-dark") }}
                             </div>
                             <br>
-                        </div>
-                        <div class="col-md-4">
                             <button type="submit" class="btn btn-dark">Search</button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <form action="/" method="POST">
+                    <div class="row">
+                        <div>
+                            {{ repo_get.csrf_token }}
+                            {{ repo_get.username(placeholder="Username", class="form-control bordered border-dark") }}
                             <br>
+                            {{ repo_get.repository(placeholder="Repository", class="form-control bordered border-dark") }}
+                            <br>
+                            <button type="submit" class="btn btn-dark">Search</button>
                         </div>
                     </div>
                 </form>
