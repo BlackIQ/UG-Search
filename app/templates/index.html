@@ -28,9 +28,6 @@
                 <p>
                     <b>Repository</b> <a href="https://github.com/BlackIQ/UG-Search" class="ilink"><i class="fa fa-github"></i>/BlackIQ/UG-Search</a>
                 </p>
-            </div>
-            <div class="col-md-4 inpart">
-                <h3>User search in <i class="fa fa-github"></i></h3>
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
                         <br>
@@ -41,6 +38,9 @@
                         </ul>
                     {% endif %}
                 {% endwith %}
+            </div>
+            <div class="col-md-4 inpart">
+                <h3>User search in <i class="fa fa-github"></i></h3>
                 <br>
                 <form action="/" method="POST">
                     <p><b>Search username</b></p>
