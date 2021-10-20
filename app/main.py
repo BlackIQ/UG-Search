@@ -80,3 +80,29 @@ def user_search(username):
     else:
         flash("Unexpected problem")
         return redirect("/")
+
+@app.route("/repository/<string:username>/<string:repo>", methods=["GET", "POST"])
+def user_search(username, repo):
+    get_repo_request = requests.get(f"https://api.github.com/repo/{username}/{repo}")
+
+    if get_repo_request.ok:
+
+        repo = get_repo_request.json()
+
+        return render_template(
+            "repo.html",
+            repo = repo
+        )
+
+    elif get_repo_request.status_code == 404:
+        flash("Repo not found")
+        return redirect("/")
+
+    elif get_repo_request.status_code == 403:
+        flash("Api not responding, please try again later")
+        return redirect("/")
+
+    else:
+        flash("Unexpected problem")
+        return redirect("/")
+        
