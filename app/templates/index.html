@@ -12,7 +12,7 @@
 <body class="main">
     <div class="">
         <div class="row">
-            <div class="col-md-5 inpart">
+            <div class="col-md-4 inpart">
                 <h3>UG search</h3>
                 <p>
                     This is an open-source project.
@@ -30,10 +30,7 @@
                 </p>
             </div>
             <div class="col-md-4 inpart">
-                <h3>Search Users in <i class="fa fa-github"></i></h3>
-                <p>
-                    Search the username here.
-                </p>
+                <h3>User search in <i class="fa fa-github"></i></h3>
                 <br>
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
@@ -46,28 +43,26 @@
                 {% endwith %}
                 <br>
                 <form action="/" method="POST">
-                    <div class="row">
+                    <p><b>Search username</b></p>
+                    <div>
                         <div>
-                            <div>
-                                {{ user_get.csrf_token }}
-                                {{ user_get.username(placeholder="Search username", class="form-control bordered border-dark") }}
-                            </div>
-                            <br>
-                            <button type="submit" class="btn btn-dark">Search</button>
+                            {{ user_get.csrf_token }}
+                            {{ user_get.username(placeholder="Search username", class="form-control bordered border-dark") }}
                         </div>
+                        <br>
+                        <button type="submit" class="btn btn-dark">Search user</button>
                     </div>
                 </form>
-                <br>
+                <hr>
                 <form action="/" method="POST">
-                    <div class="row">
-                        <div>
-                            {{ repo_get.csrf_token }}
-                            {{ repo_get.username(placeholder="Username", class="form-control bordered border-dark") }}
-                            <br>
-                            {{ repo_get.repository(placeholder="Repository", class="form-control bordered border-dark") }}
-                            <br>
-                            <button type="submit" class="btn btn-dark">Search</button>
-                        </div>
+                    <p><b>Search repository</b></p>
+                    <div>
+                        {{ repo_get.csrf_token }}
+                        {{ repo_get.username(placeholder="Username", class="form-control bordered border-dark") }}
+                        <br>
+                        {{ repo_get.repository(placeholder="Repository", class="form-control bordered border-dark") }}
+                        <br>
+                        <button type="submit" class="btn btn-dark">Search repository</button>
                     </div>
                 </form>
                 <br>
