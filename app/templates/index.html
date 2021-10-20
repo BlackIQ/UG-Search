@@ -31,13 +31,13 @@
             </div>
             <div class="col-md-4 inpart">
                 <h3>User search in <i class="fa fa-github"></i></h3>
-                <br>
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
+                        <br>
                         <ul class="flashes">
-                        {% for message in messages %}
-                        <li>{{ message }}</li>
-                        {% endfor %}
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
                         </ul>
                     {% endif %}
                 {% endwith %}
