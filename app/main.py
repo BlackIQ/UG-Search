@@ -12,14 +12,30 @@ app.config['SECRET_KEY'] = '1234'
 class GetUsername(FlaskForm):
     username = StringField('username', validators=[DataRequired()])
 
+class GetRepo(FlaskForm):
+    username = StringField('username', validators=[DataRequired()])
+    repository = StringField('repository', validators=[DataRequired()])
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    form = GetUsername(request.form)
-    if request.method == 'POST' and form.validate():
-        username = form.username.data
-        return redirect(f'/user/{username}')
-    return render_template('index.html', form=form)
+    user_get = GetUsername(request.form)
+    repo_get = GetRepo(request.form)
+
+    if request.method == 'POST':
+        if user_get.validate():
+            username = user_get.username.data
+            return redirect(f'/user/{username}')
+        elif repo_get.validate():
+            username = repo_get.username.data
+            repo = repo_get.repository.data
+            return redirect(f'/repository/{username}/{repo}')
+
+    return render_template(
+        'index.html',
+        user_get = user_get,
+        repo_get = repo_get
+    )
 
 
 @app.route("/user", methods=["GET", "POST"])
