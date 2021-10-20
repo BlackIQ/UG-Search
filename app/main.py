@@ -81,6 +81,11 @@ def user_search(username):
         flash("Unexpected problem")
         return redirect("/")
 
+@app.route("/repository", methods=["GET", "POST"])
+def user():
+    flash('You should enter a username and repository')
+    return redirect("/")
+
 @app.route("/repository/<string:username>/<string:repo>", methods=["GET", "POST"])
 def user_search(username, repo):
     get_repo_request = requests.get(f"https://api.github.com/repo/{username}/{repo}")
@@ -105,4 +110,3 @@ def user_search(username, repo):
     else:
         flash("Unexpected problem")
         return redirect("/")
-        
