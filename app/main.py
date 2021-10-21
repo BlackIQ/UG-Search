@@ -88,7 +88,7 @@ def repo():
 
 @app.route("/repository/<string:username>/<string:repo>", methods=["GET", "POST"])
 def repo_search(username, repo):
-    get_repo_request = requests.get(f"https://api.github.com/repo/{username}/{repo}")
+    get_repo_request = requests.get(f"https://api.github.com/repos/{username}/{repo}")
 
     if get_repo_request.ok:
 
